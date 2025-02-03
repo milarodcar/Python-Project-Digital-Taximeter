@@ -45,7 +45,7 @@ def main():
             if option == '1':
                 logging.info("Starting new trip")
                 trip = Trip(taximeter)  # Create new trip instance
-                trip.start()
+                trip.start()  # Use Trip's start method to begin the trip
             elif option == '2':
                 logging.info("User exited application")
                 print("\nThank you for using the Digital Taximeter. Goodbye!")

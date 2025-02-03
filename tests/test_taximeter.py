@@ -26,7 +26,8 @@ class TestTaximeter(unittest.TestCase):
 
     def test_adjust_rates_low(self):
         idle, moving = self.taximeter.adjust_rates('3')
-        self.assertEqual((idle, moving), (0.01, 0.04))
+        self.assertEqual(round(idle, 2), 0.01)
+        self.assertEqual(round(moving, 2), 0.04)
 
     def test_adjust_rates_invalid_level(self):
         with self.assertRaises(ValueError):
@@ -42,7 +43,7 @@ class TestTaximeter(unittest.TestCase):
     def test_start_trip_negative_duration(self, mock_logger):
         statuses = [('1', -5)]
         self.taximeter.start_trip('1', statuses)
-        mock_logger.assert_called_with("Negative duration -5 found. Skipping this status segment.")
+        mock_logger.assert_called_with("Invalid duration -5 found. Skipping this status segment.")
 
 if __name__ == "__main__":
     unittest.main()

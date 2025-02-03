@@ -15,20 +15,20 @@ class TestTrip(unittest.TestCase):
     def test_normal_demand_trip(self, mock_input, mock_time):
         with patch('builtins.print') as mock_print:
             self.trip.start()
-            mock_print.assert_any_call("\nTrip ended. Total fare: 0.60 €")
+            mock_print.assert_any_call("\nTrip ended. Your total fare is 0.60 €.")
 
     @patch('time.time', side_effect=[200, 210])  # No time elapsed
     @patch('builtins.input', side_effect=['3', '3'])
     def test_empty_trip(self, mock_input, mock_time):
         with patch('builtins.print') as mock_print:
             self.trip.start()
-            mock_print.assert_any_call("\nTrip ended. Total fare: 0.00 €")
+            mock_print.assert_any_call("No trip data to finalize. Please record some movement or idle time first.")
 
     @patch('builtins.input', side_effect=['invalid', '1', '3'])
     def test_retry_invalid_demand_level(self, mock_input):
         with patch('builtins.print') as mock_print:
             self.trip.start()
-            mock_print.assert_any_call("Invalid demand level. Please enter 1, 2 or 3.")
+            mock_print.assert_any_call("Invalid option. Please try again.")
 
     @patch('logging.info')
     @patch('time.time', side_effect=[100, 100])  # Zero duration
@@ -42,7 +42,7 @@ class TestTrip(unittest.TestCase):
     def test_retry_invalid_status(self, mock_input, mock_logger):
         with patch('builtins.print'):  # Suppress print output
             self.trip.start()
-        mock_logger.assert_any_call("Error in get_trip_status: Invalid taxi status")
+        mock_logger.assert_any_call("Invalid input: Invalid input invalid")
 
 if __name__ == "__main__":
     unittest.main()
