@@ -1,8 +1,9 @@
-import logging
-from datetime import datetime
-import os
 from digital_taximeter.taximeter import Taximeter
 from digital_taximeter.trip import Trip
+from digital_taximeter.history import History
+import logging
+import os
+from datetime import datetime
 
 def clear_terminal():
     """Clear the terminal screen for better user experience"""
@@ -35,17 +36,20 @@ def main():
     show_welcome()
 
     taximeter = Taximeter()
-    
+    history = History()  # Initialize history to load previous trips if needed
+    trip_counter = 1  # Initialize a counter for trips (trip_id)
+
     logging.info("Application started")
-    
+
     while True:
         try:
             option = input("\nMain Menu\n1. Start new trip\n2. Exit\nYour choice: ").strip()
 
             if option == '1':
-                logging.info("Starting new trip")
-                trip = Trip(taximeter)  # Create new trip instance
+                logging.info(f"Starting new trip with trip_id: {trip_counter}")
+                trip = Trip(trip_id=trip_counter, taximeter=taximeter)  # Pass trip_id to the Trip class
                 trip.start()  # Use Trip's start method to begin the trip
+                trip_counter += 1  # Increment trip_id for the next trip
             elif option == '2':
                 logging.info("User exited application")
                 print("\nThank you for using the Digital Taximeter. Goodbye!")

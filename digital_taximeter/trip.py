@@ -2,7 +2,8 @@ import logging
 import time
 
 class Trip:
-    def __init__(self, taximeter):
+    def __init__(self, trip_id, taximeter):
+        self.trip_id = trip_id
         self.taximeter = taximeter
 
     def get_user_input(self, prompt, valid_options):
