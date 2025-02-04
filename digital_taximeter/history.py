@@ -6,10 +6,27 @@ from digital_taximeter.trip import Trip
 
 class History:
     def __init__(self, log_file='app.log', history_file='history.json'):
+        """Make sure the Logs folder exists"""
+        self.logs_dir = 'Logs'
+        os.makedirs(self.logs_dir, exist_ok=True)
+
+        """Set log and history file paths"""
+        self.log_file = os.path.join(self.logs_dir, log_file)
+        self.history_file = os.path.join(self.logs_dir, history_file)
+
+        """Initialize logging"""
+        self.setup_logging()
         self.trips = []
-        self.log_file = log_file
-        self.history_file = history_file
         self.load_history()
+
+    def setup_logging(self):
+        """Configure logging to write to the log file in the Logs folder."""
+        logging.basicConfig(
+            filename=self.log_file,
+            level=logging.INFO,
+            format='%(asctime)s - %(levelname)s - %(message)s',
+            datefmt='%Y-%m-%d %H:%M:%S'
+        )
 
     def load_history(self):
         """Read the logs to extract trips"""

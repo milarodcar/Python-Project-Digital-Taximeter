@@ -8,14 +8,14 @@ class Taximeter:
         self.total_fare = 0.0
 
     def adjust_rates(self, demand_level):
-        """Adjust rates based on demand level"""
+        """Adjust rates based on demand level."""
         try:
             rates = {
                 '1': (base_idle_rate, base_moving_rate),
                 '2': (base_idle_rate + 0.02, base_moving_rate + 0.02),
                 '3': (base_idle_rate - 0.01, base_moving_rate - 0.01)
             }
-        
+
             if demand_level not in rates:
                 raise ValueError("Invalid demand level")
 
@@ -28,9 +28,9 @@ class Taximeter:
         except Exception as e:
             logging.error(f"Unexpected error in adjust_rates: {e}")
             raise
-    
+
     def calculate_fare(self, time_elapsed, rate_per_second):
-        """Calculate the fare for a given time and rate"""
+        """Calculate the fare for a given time and rate."""
         try:
             if time_elapsed < 0:
                 raise ValueError("Time elapsed cannot be negative")
@@ -45,7 +45,7 @@ class Taximeter:
             raise
 
     def start_trip(self, demand_level, statuses):
-        """Main trip logic for calculating total fare and adjusting rates"""
+        """Main trip logic for calculating total fare and adjusting rates."""
         try:
             idle_rate, moving_rate = self.adjust_rates(demand_level)
             logging.info(f"Starting trip with demand level {demand_level}. Rates: idle = {idle_rate} €, moving = {moving_rate} €")

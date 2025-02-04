@@ -30,7 +30,7 @@ def show_welcome():
 def setup_logging():
     """Configure logging with timestamped filename"""
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    log_filename = f"taximeter_{timestamp}.log"
+    log_filename = os.path.join("Logs", f"taximeter_{timestamp}.log")
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s - %(levelname)s - %(message)s",
@@ -44,7 +44,7 @@ def main():
     show_welcome()
 
     taximeter = Taximeter()
-    history = History()  # Initialize history to load previous trips if needed
+    history = History()
 
     logging.info("Application started")
 
@@ -57,7 +57,7 @@ def main():
                 trip_id = generate_trip_id()
                 logging.info(f"Starting new trip with trip_id: {trip_id}")
                 trip = Trip(trip_id=trip_id, taximeter=taximeter)  # Pass the trip_id to the Trip class
-                trip.start()  # Use Trip's start method to begin the trip
+                trip.start(taximeter)  # Use Trip's start method to begin the trip
             elif option == '2':
                 logging.info("User exited application")
                 print("\nThank you for using the Digital Taximeter. Goodbye!")
