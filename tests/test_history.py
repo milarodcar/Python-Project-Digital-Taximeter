@@ -12,12 +12,13 @@ class TestHistory(unittest.TestCase):
 
         @patch("builtins.open", new_callable=mock_open, read_data="Starting new trip\n Taxi is moving for 60.0 seconds\nTRip ended. Total fare: 10.0 €")
         @patch("os.path.exists", return_value=True)
+
+
         def test_load_history(self, mock_exists, mock_open):
             "Test the load_history method"
             self.history.load_history()
 
             mock_open.assert_called_with('test_log.log')
-
             self.assertEqual(len(self.history.trips), 1)
             trip = self.history.trips[0]
             self.assertEqual(trip.trip_id, 1)
