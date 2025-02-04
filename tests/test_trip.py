@@ -7,7 +7,8 @@ import logging
 class TestTrip(unittest.TestCase):
     def setUp(self):
         self.taximeter = Taximeter()
-        self.trip = Trip(self.taximeter)
+        self.trip_id = 'test_trip_id' 
+        self.trip = Trip(self.trip_id, self.taximeter)
         logging.disable(logging.CRITICAL)
 
     @patch('time.time', side_effect=[100, 110, 115, 120])  # 10s moving + 5s idle

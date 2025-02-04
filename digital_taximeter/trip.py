@@ -64,3 +64,4 @@ class Trip:
                 logging.error(f"Error in trip process: {e}")
                 print("An unexpected error occurred. Please try again.")
                 break
+
