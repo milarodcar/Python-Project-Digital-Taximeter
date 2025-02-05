@@ -3,6 +3,7 @@ from unittest.mock import patch
 from digital_taximeter.taximeter import Taximeter
 import logging
 
+
 class TestTaximeter(unittest.TestCase):
     def setUp(self):
         self.taximeter = Taximeter()
@@ -10,24 +11,25 @@ class TestTaximeter(unittest.TestCase):
 
     def test_calculate_fare_valid_input(self):
         fare = self.taximeter.calculate_fare(10, 0.05)
-        self.assertEqual(fare, 0.5)
+        self.assertEqual(fare, 2.80)
+
 
     def test_calculate_fare_negative_time(self):
         with self.assertRaises(ValueError):
-            self.taximeter.calculate_fare(-5, 0.05)
+            self.taximeter.calculate_fare(-5, 2.80)
 
     def test_adjust_rates_normal(self):
         idle, moving = self.taximeter.adjust_rates('1')
-        self.assertEqual((idle, moving), (0.02, 0.05))
+        self.assertEqual((idle, moving), (2.77, 2.80))
 
     def test_adjust_rates_high(self):
         idle, moving = self.taximeter.adjust_rates('2')
-        self.assertEqual((idle, moving), (0.04, 0.07))
+        self.assertEqual((idle, moving), (2.79, 2.82))
 
     def test_adjust_rates_low(self):
         idle, moving = self.taximeter.adjust_rates('3')
-        self.assertEqual(round(idle, 2), 0.01)
-        self.assertEqual(round(moving, 2), 0.04)
+        self.assertEqual(round(idle, 2), 2.76)
+        self.assertEqual(round(moving, 2), 2.79)
 
     def test_adjust_rates_invalid_level(self):
         with self.assertRaises(ValueError):

@@ -54,6 +54,7 @@ def main():
 
             if option == '1':
                 # Call the generate_trip_id function to get a new unique ID
+                total_fare = 0
                 trip_id = generate_trip_id()
                 logging.info(f"Starting new trip with trip_id: {trip_id}")
                 trip = Trip(trip_id=trip_id, taximeter=taximeter)  # Pass the trip_id to the Trip class

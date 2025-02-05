@@ -8,7 +8,7 @@ class TestTrip(unittest.TestCase):
     def setUp(self):
         self.taximeter = Taximeter()
         self.trip_id = 'test_trip_id'
-        self.trip = Trip(self.trip_id)
+        self.trip = Trip(self.trip_id, self.taximeter)
         logging.disable(logging.CRITICAL)
 
     @patch('time.time', side_effect=[100, 110, 115, 120])  # 10s moving + 5s idle
@@ -16,7 +16,7 @@ class TestTrip(unittest.TestCase):
     def test_normal_demand_trip(self, mock_input, mock_time):
         with patch('builtins.print') as mock_print:
             self.trip.start(self.taximeter)
-            mock_print.assert_any_call("\nTrip ended. Your total fare is 0.60 €.")
+            mock_print.assert_any_call("\nTrip ended. Your total fare is 41.85 €.")
 
     @patch('time.time', side_effect=[200, 210])  # No time elapsed
     @patch('builtins.input', side_effect=['3', '3'])

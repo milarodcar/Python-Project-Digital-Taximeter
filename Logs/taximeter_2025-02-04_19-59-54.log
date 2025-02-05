@@ -1,8 +1,0 @@
-2025-02-04 19:59:54,555 - INFO - Application started
-2025-02-04 19:59:57,583 - INFO - Starting new trip with trip_id: HY012313
-2025-02-04 19:59:57,583 - INFO - Starting the trip process
-2025-02-04 19:59:58,571 - INFO - User selected: 1
-2025-02-04 19:59:58,571 - INFO - Demand level selected: 1
-2025-02-04 19:59:59,975 - INFO - User selected: 3
-2025-02-04 19:59:59,976 - WARNING - Attempted to finish trip without any statuses.
-2025-02-04 20:00:01,914 - INFO - User exited application

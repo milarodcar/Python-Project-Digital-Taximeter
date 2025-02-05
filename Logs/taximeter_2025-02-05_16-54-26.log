@@ -1,0 +1,14 @@
+2025-02-05 16:54:26,374 - INFO - Application started
+2025-02-05 16:54:27,881 - INFO - Starting new trip with trip_id: BE697671
+2025-02-05 16:54:27,881 - INFO - Starting the trip process
+2025-02-05 16:54:29,207 - INFO - User selected: 1
+2025-02-05 16:54:29,207 - INFO - Demand level selected: 1
+2025-02-05 16:54:30,122 - INFO - User selected: 1
+2025-02-05 16:54:30,919 - INFO - Added status: 1 for 0.80 seconds
+2025-02-05 16:54:31,723 - INFO - User selected: 3
+2025-02-05 16:54:31,723 - INFO - Adjusted rates for demand level 1: idle = 2.77 €, moving = 2.8 €
+2025-02-05 16:54:31,723 - INFO - Starting trip with demand level 1. Rates: idle = 2.77 €, moving = 2.8 €
+2025-02-05 16:54:31,723 - INFO - Taxi is moving for 0.80 seconds. Fare for this segment: 2.23 €
+2025-02-05 16:54:31,723 - INFO - Trip ended. Total fare: 2.23 €
+2025-02-05 16:54:31,723 - INFO - Trip ended. Total fare: 2.23 €
+2025-02-05 16:54:33,822 - INFO - User exited application

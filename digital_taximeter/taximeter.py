@@ -2,18 +2,20 @@ import logging
 
 base_idle_rate = 0.02
 base_moving_rate = 0.05
+base_trip = 2.75
+
 
 class Taximeter:
     def __init__(self):
-        self.total_fare = 0.0
+        self.total_fare = 0.00 #base rate for the trip
 
     def adjust_rates(self, demand_level):
         """Adjust rates based on demand level."""
         try:
             rates = {
-                '1': (base_idle_rate, base_moving_rate),
-                '2': (base_idle_rate + 0.02, base_moving_rate + 0.02),
-                '3': (base_idle_rate - 0.01, base_moving_rate - 0.01)
+                '1': (base_trip + base_idle_rate, base_trip + base_moving_rate),
+                '2': (base_trip + base_idle_rate + 0.02, base_trip + base_moving_rate + 0.02),
+                '3': (base_trip + base_idle_rate - 0.01, base_trip + base_moving_rate - 0.01)
             }
 
             if demand_level not in rates:
@@ -47,6 +49,7 @@ class Taximeter:
     def start_trip(self, demand_level, statuses):
         """Main trip logic for calculating total fare and adjusting rates."""
         try:
+            self.total_fare = 0.0
             idle_rate, moving_rate = self.adjust_rates(demand_level)
             logging.info(f"Starting trip with demand level {demand_level}. Rates: idle = {idle_rate} €, moving = {moving_rate} €")
 
@@ -69,3 +72,5 @@ class Taximeter:
         except Exception as e:
             logging.error(f"Unexpected error in start_trip: {e}")
             raise
+
+

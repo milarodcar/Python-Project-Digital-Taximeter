@@ -47,9 +47,11 @@ class Trip:
                         print("No trip data to finalize. Please record some movement or idle time first.")
                         logging.warning("Attempted to finish trip without any statuses.")
                     else:
+                        total_fare  = 0
                         total_fare = taximeter.start_trip(demand_level, statuses)
                         print(f"\nTrip ended. Your total fare is {total_fare:.2f} €.")
                         logging.info(f"Trip ended. Total fare: {total_fare:.2f} €")
+                        
                     break
 
                 elif status in ['1', '2']:
