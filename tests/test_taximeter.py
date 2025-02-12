@@ -11,7 +11,7 @@ class TestTaximeter(unittest.TestCase):
 
     def test_calculate_fare_valid_input(self):
         fare = self.taximeter.calculate_fare(10, 0.05)
-        self.assertEqual(fare, 2.80)
+        self.assertEqual(fare, 0.5)
 
 
     def test_calculate_fare_negative_time(self):
@@ -20,16 +20,16 @@ class TestTaximeter(unittest.TestCase):
 
     def test_adjust_rates_normal(self):
         idle, moving = self.taximeter.adjust_rates('1')
-        self.assertEqual((idle, moving), (2.77, 2.80))
+        self.assertEqual((idle, moving), (0.02, 0.05))
 
     def test_adjust_rates_high(self):
         idle, moving = self.taximeter.adjust_rates('2')
-        self.assertEqual((idle, moving), (2.79, 2.82))
+        self.assertEqual((idle, moving), (0.04, 0.07))
 
     def test_adjust_rates_low(self):
         idle, moving = self.taximeter.adjust_rates('3')
-        self.assertEqual(round(idle, 2), 2.76)
-        self.assertEqual(round(moving, 2), 2.79)
+        self.assertEqual(round(idle, 2), 0.01)
+        self.assertEqual(round(moving, 2), 0.04)
 
     def test_adjust_rates_invalid_level(self):
         with self.assertRaises(ValueError):

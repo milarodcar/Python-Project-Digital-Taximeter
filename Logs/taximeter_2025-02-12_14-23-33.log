@@ -1,0 +1,59 @@
+2025-02-12 14:23:33,920 - INFO - Application started
+2025-02-12 14:23:35,323 - INFO - Starting new trip with trip_id: HK021611
+2025-02-12 14:23:35,324 - INFO - Starting the trip process
+2025-02-12 14:23:36,876 - INFO - User selected: 1
+2025-02-12 14:23:36,876 - INFO - Demand level selected: 1
+2025-02-12 14:23:38,594 - INFO - User selected: 1
+2025-02-12 14:23:42,308 - INFO - Added status: 1 for 3.71 seconds
+2025-02-12 14:23:45,911 - INFO - User selected: 2
+2025-02-12 14:23:50,217 - INFO - Added status: 2 for 4.31 seconds
+2025-02-12 14:23:51,567 - INFO - User selected: 3
+2025-02-12 14:23:51,567 - INFO - Adjusted rates for demand level 1: idle = 0.02 €, moving = 0.05 €
+2025-02-12 14:23:51,567 - INFO - Starting trip with demand level 1. Rates: idle = 0.02 €, moving = 0.05 €
+2025-02-12 14:23:51,568 - INFO - Taxi is moving for 3.71 seconds. Fare for this segment: 0.19 €
+2025-02-12 14:23:51,568 - INFO - Taxi is idle for 4.31 seconds. Fare for this segment: 0.09 €
+2025-02-12 14:23:51,568 - INFO - Trip ended. Total fare: 3.02 €
+2025-02-12 14:23:51,569 - INFO - Trip ended. Total fare: 3.02 €
+2025-02-12 14:23:52,779 - INFO - Starting new trip with trip_id: WE545514
+2025-02-12 14:23:52,779 - INFO - Starting the trip process
+2025-02-12 14:23:54,542 - INFO - User selected: 2
+2025-02-12 14:23:54,542 - INFO - Demand level selected: 2
+2025-02-12 14:24:13,224 - INFO - User selected: 3
+2025-02-12 14:24:13,225 - WARNING - Attempted to finish trip without any statuses.
+2025-02-12 14:24:20,416 - INFO - Starting new trip with trip_id: GD878978
+2025-02-12 14:24:20,416 - INFO - Starting the trip process
+2025-02-12 14:24:21,153 - INFO - User selected: 1
+2025-02-12 14:24:21,153 - INFO - Demand level selected: 1
+2025-02-12 14:24:21,754 - INFO - User selected: 1
+2025-02-12 14:24:23,131 - INFO - Added status: 1 for 1.38 seconds
+2025-02-12 14:24:25,540 - INFO - User selected: 3
+2025-02-12 14:24:25,541 - INFO - Adjusted rates for demand level 1: idle = 0.02 €, moving = 0.05 €
+2025-02-12 14:24:25,541 - INFO - Starting trip with demand level 1. Rates: idle = 0.02 €, moving = 0.05 €
+2025-02-12 14:24:25,541 - INFO - Taxi is moving for 1.38 seconds. Fare for this segment: 0.07 €
+2025-02-12 14:24:25,541 - INFO - Trip ended. Total fare: 2.82 €
+2025-02-12 14:24:25,541 - INFO - Trip ended. Total fare: 2.82 €
+2025-02-12 14:25:43,827 - INFO - Starting new trip with trip_id: YM275575
+2025-02-12 14:25:43,828 - INFO - Starting the trip process
+2025-02-12 14:25:44,922 - INFO - User selected: 1
+2025-02-12 14:25:44,922 - INFO - Demand level selected: 1
+2025-02-12 14:25:46,262 - INFO - User selected: 1
+2025-02-12 14:25:47,366 - INFO - Added status: 1 for 1.10 seconds
+2025-02-12 14:25:48,176 - INFO - User selected: 3
+2025-02-12 14:25:48,176 - INFO - Adjusted rates for demand level 1: idle = 0.02 €, moving = 0.05 €
+2025-02-12 14:25:48,176 - INFO - Starting trip with demand level 1. Rates: idle = 0.02 €, moving = 0.05 €
+2025-02-12 14:25:48,177 - INFO - Taxi is moving for 1.10 seconds. Fare for this segment: 0.06 €
+2025-02-12 14:25:48,177 - INFO - Trip ended. Total fare: 2.81 €
+2025-02-12 14:25:48,177 - INFO - Trip ended. Total fare: 2.81 €
+2025-02-12 14:25:52,947 - INFO - Starting new trip with trip_id: CY210298
+2025-02-12 14:25:52,948 - INFO - Starting the trip process
+2025-02-12 14:25:54,275 - INFO - User selected: 1
+2025-02-12 14:25:54,275 - INFO - Demand level selected: 1
+2025-02-12 14:25:57,449 - INFO - User selected: 1
+2025-02-12 14:26:09,647 - INFO - Added status: 1 for 12.20 seconds
+2025-02-12 14:26:12,343 - INFO - User selected: 3
+2025-02-12 14:26:12,344 - INFO - Adjusted rates for demand level 1: idle = 0.02 €, moving = 0.05 €
+2025-02-12 14:26:12,344 - INFO - Starting trip with demand level 1. Rates: idle = 0.02 €, moving = 0.05 €
+2025-02-12 14:26:12,344 - INFO - Taxi is moving for 12.20 seconds. Fare for this segment: 0.61 €
+2025-02-12 14:26:12,344 - INFO - Trip ended. Total fare: 3.36 €
+2025-02-12 14:26:12,345 - INFO - Trip ended. Total fare: 3.36 €
+2025-02-12 14:26:24,677 - INFO - User exited application

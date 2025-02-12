@@ -1,0 +1,35 @@
+2025-02-12 14:19:39,299 - INFO - Application started
+2025-02-12 14:20:19,895 - INFO - Starting new trip with trip_id: ML412267
+2025-02-12 14:20:19,896 - INFO - Starting the trip process
+2025-02-12 14:20:24,432 - INFO - User selected: 2
+2025-02-12 14:20:24,433 - INFO - Demand level selected: 2
+2025-02-12 14:20:28,707 - INFO - User selected: 1
+2025-02-12 14:20:35,048 - INFO - Added status: 1 for 6.34 seconds
+2025-02-12 14:20:40,823 - INFO - User selected: 3
+2025-02-12 14:20:40,823 - INFO - Adjusted rates for demand level 2: idle = 0.04 €, moving = 0.07 €
+2025-02-12 14:20:40,824 - INFO - Starting trip with demand level 2. Rates: idle = 0.04 €, moving = 0.07 €
+2025-02-12 14:20:40,824 - INFO - Taxi is moving for 6.34 seconds. Fare for this segment: 0.44 €
+2025-02-12 14:20:40,824 - INFO - Trip ended. Total fare: 3.19 €
+2025-02-12 14:20:40,824 - INFO - Trip ended. Total fare: 3.19 €
+2025-02-12 14:21:16,378 - INFO - Starting new trip with trip_id: IS416967
+2025-02-12 14:21:16,379 - INFO - Starting the trip process
+2025-02-12 14:21:20,634 - ERROR - Invalid input: Invalid input 4
+2025-02-12 14:21:22,934 - INFO - User selected: 1
+2025-02-12 14:21:22,934 - INFO - Demand level selected: 1
+2025-02-12 14:21:26,737 - INFO - User selected: 2
+2025-02-12 14:21:30,084 - INFO - Added status: 2 for 3.35 seconds
+2025-02-12 14:21:32,744 - INFO - User selected: 1
+2025-02-12 14:21:43,456 - INFO - Added status: 1 for 10.71 seconds
+2025-02-12 14:21:45,422 - INFO - User selected: 2
+2025-02-12 14:21:49,487 - INFO - Added status: 2 for 4.06 seconds
+2025-02-12 14:21:50,450 - INFO - User selected: 3
+2025-02-12 14:21:50,450 - INFO - Adjusted rates for demand level 1: idle = 0.02 €, moving = 0.05 €
+2025-02-12 14:21:50,450 - INFO - Starting trip with demand level 1. Rates: idle = 0.02 €, moving = 0.05 €
+2025-02-12 14:21:50,451 - INFO - Taxi is idle for 3.35 seconds. Fare for this segment: 0.07 €
+2025-02-12 14:21:50,451 - INFO - Taxi is moving for 10.71 seconds. Fare for this segment: 0.54 €
+2025-02-12 14:21:50,451 - INFO - Taxi is idle for 4.06 seconds. Fare for this segment: 0.08 €
+2025-02-12 14:21:50,451 - INFO - Trip ended. Total fare: 3.43 €
+2025-02-12 14:21:50,451 - INFO - Trip ended. Total fare: 3.43 €
+2025-02-12 14:21:56,229 - WARNING - Invalid menu input: 5
+2025-02-12 14:21:58,811 - WARNING - Invalid menu input: f
+2025-02-12 14:22:00,974 - INFO - User exited application
