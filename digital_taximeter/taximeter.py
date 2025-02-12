@@ -10,7 +10,18 @@ class Taximeter:
         self.total_fare = 0.00
 
     def adjust_rates(self, demand_level):
-        """Adjust rates based on demand level."""
+        """
+        Adjust rates based on demand level.
+
+        Parameters:
+        demand_level (str): A string representing the demand level. It should be one of the following: '1', '2', '3'.
+
+        Returns:
+        tuple: A tuple containing the adjusted idle rate and moving rate for the given demand level.
+
+        Raises:
+        ValueError: If the demand level is not one of the valid options.
+        """
         try:
             rates = {
                 '1': (base_idle_rate,  base_moving_rate),
@@ -32,7 +43,19 @@ class Taximeter:
             raise
 
     def calculate_fare(self, time_elapsed, rate_per_second):
-        """Calculate the fare for a given time and rate."""
+        """
+        Calculate the fare for a given time and rate.
+
+        Parameters:
+        time_elapsed (float): The time elapsed in seconds. It should be a non-negative number.
+        rate_per_second (float): The rate per second for calculating the fare. It should be a positive number.
+
+        Returns:
+        float: The calculated fare for the given time and rate.
+
+        Raises:
+        ValueError: If the time elapsed is negative.
+        """
         try:
             if time_elapsed < 0:
                 raise ValueError("Time elapsed cannot be negative")
@@ -47,7 +70,19 @@ class Taximeter:
             raise
 
     def start_trip(self, demand_level, statuses):
-        """Main trip logic for calculating total fare and adjusting rates."""
+        """
+        Main trip logic for calculating total fare and adjusting rates.
+
+        Parameters:
+        demand_level (str): A string representing the demand level. It should be one of the following: '1', '2', '3'.
+        statuses (list): A list of tuples, where each tuple contains a status ('1' for moving, '2' for idle) and a duration (in seconds).
+
+        Returns:
+        float: The total fare for the trip.
+
+        Raises:
+        Exception: If any unexpected error occurs during the trip calculation.
+        """
         try:
             self.total_fare = base_trip
             idle_rate, moving_rate = self.adjust_rates(demand_level)

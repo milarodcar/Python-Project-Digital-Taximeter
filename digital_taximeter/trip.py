@@ -12,7 +12,19 @@ class Trip:
         self.fare = fare
 
     def get_user_input(self, prompt, valid_options):
-        """Handles user input validation for specific prompts."""
+        """
+        Handles user input validation for specific prompts.
+
+        Parameters:
+        prompt (str): The prompt message to display to the user.
+        valid_options (list): A list of valid options that the user can select.
+
+        Returns:
+        str: The user's selected option.
+
+        Raises:
+        ValueError: If the user's input is not in the valid_options list.
+        """
         while True:
             try:
                 user_input = input(prompt).strip()
@@ -26,7 +38,20 @@ class Trip:
                 print("Invalid option. Please try again.")
 
     def start(self, taximeter):
-        """Start the trip process and interact with the user."""
+        """
+        Start the trip process and interact with the user.
+
+        Parameters:
+        taximeter (Taximeter): An instance of the Taximeter class representing the taximeter for this trip.
+
+        Returns:
+        None
+
+        The function starts the trip process by prompting the user to select the demand level and taxi status.
+        It records the taxi status and time elapsed for each status change.
+        If the user selects "Finish", it calculates the total fare based on the demand level and recorded statuses.
+        The function handles exceptions and provides appropriate error messages.
+        """
         statuses = []
         logging.info("Starting the trip process")
 
