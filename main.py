@@ -1,11 +1,14 @@
 import random
 import string
-from digital_taximeter.taximeter import Taximeter
-from digital_taximeter.trip import Trip
-from digital_taximeter.history import History
 import logging
 import os
 from datetime import datetime
+from pyfiglet import figlet_format
+from termcolor import colored
+from digital_taximeter.taximeter import Taximeter
+from digital_taximeter.trip import Trip
+from digital_taximeter.history import History
+
 
 def generate_trip_id():
     """
@@ -52,12 +55,14 @@ def show_welcome():
     Returns:
     None
     """
+    welcome_message = figlet_format("Welcome!", font="slant")
+    print(colored(welcome_message, 'yellow'))
     print("\nWelcome to the Digital Taximeter")
     print("This program calculates your trip fare based on idle and moving time.")
     print("\nInstructions:")
     print("- Start a trip")
-    print("- Choose demand level: 1=Normal, 2=High, 3=Low")
-    print("- During trip: 1=Moving, 2=Idle, 3=Finish")
+    print("- Choose demand level:\n 1.Normal\n 2.High\n 3.Low")
+    print("- During trip:\n 1.Moving\n 2.Idle\n 3.Finish")
     print("- You can do multiple trips without exiting\n")
 
 def setup_logging():

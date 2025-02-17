@@ -1,0 +1,15 @@
+2025-02-13 16:02:09,383 - INFO - Application started
+2025-02-13 16:02:12,005 - INFO - Starting new trip with trip_id: VM555619
+2025-02-13 16:02:12,005 - INFO - Starting the trip process
+2025-02-13 16:02:14,857 - INFO - User selected: 1
+2025-02-13 16:02:14,857 - INFO - Demand level selected: 1
+2025-02-13 16:02:16,344 - INFO - User selected: 1
+2025-02-13 16:02:17,491 - INFO - Added status: 1 for 1.15 seconds
+2025-02-13 16:02:17,688 - ERROR - Invalid input: Invalid input 
+2025-02-13 16:02:19,094 - INFO - User selected: 3
+2025-02-13 16:02:19,094 - INFO - Adjusted rates for demand level 1: idle = 0.02 €, moving = 0.05 €
+2025-02-13 16:02:19,094 - INFO - Starting trip with demand level 1. Rates: idle = 0.02 €, moving = 0.05 €
+2025-02-13 16:02:19,094 - INFO - Taxi is moving for 1.15 seconds. Fare for this segment: 0.06 €
+2025-02-13 16:02:19,094 - INFO - Trip ended. Total fare: 2.81 €
+2025-02-13 16:02:19,094 - INFO - Trip ended. Total fare: 2.81 €
+2025-02-13 16:02:21,376 - INFO - User exited application

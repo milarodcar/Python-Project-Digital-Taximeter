@@ -1,0 +1,15 @@
+2025-02-13 16:10:59,702 - INFO - Application started
+2025-02-13 16:11:47,665 - INFO - Starting new trip with trip_id: KA499235
+2025-02-13 16:11:47,666 - INFO - Starting the trip process
+2025-02-13 16:11:48,902 - INFO - User selected: 1
+2025-02-13 16:11:48,902 - INFO - Demand level selected: 1
+2025-02-13 16:11:51,008 - INFO - User selected: 1
+2025-02-13 16:11:58,104 - INFO - Added status: 1 for 7.10 seconds
+2025-02-13 16:11:59,328 - INFO - User selected: 3
+2025-02-13 16:11:59,328 - INFO - Adjusted rates for demand level 1: idle = 0.02 €, moving = 0.05 €
+2025-02-13 16:11:59,328 - INFO - Starting trip with demand level 1. Rates: idle = 0.02 €, moving = 0.05 €
+2025-02-13 16:11:59,329 - INFO - Taxi is moving for 7.10 seconds. Fare for this segment: 0.35 €
+2025-02-13 16:11:59,329 - INFO - Trip ended. Total fare: 3.10 €
+2025-02-13 16:11:59,329 - INFO - Trip ended. Total fare: 3.10 €
+2025-02-13 16:13:23,025 - WARNING - Invalid menu input: [A
+2025-02-13 16:13:24,558 - INFO - User exited application
